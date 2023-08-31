@@ -70,9 +70,10 @@ app.post("/login", (req, res) => {
               // ...
             ]
           }
-    
+            console.log(data)
             res.status(200).json({message:"Kullanıcı Bilgileri", data:data})
     }else {
+        console.log({message:"Kullanıcı Bulunamadı"})
         res.status(404).json({message:"Kullanıcı Bulunamadı"})
     }
 
