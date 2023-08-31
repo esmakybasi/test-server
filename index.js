@@ -41,8 +41,10 @@ app.post("/login", (req, res) => {
 
 
     if(req.body.username == "esma123_11@gmail.com" && req.body.password == "123456789"){
+        console.log({isLogin:true, message:"Login Başarılı"})
         res.status(200).send({isLogin:true, message:"Login Başarılı"})
     }else{
+        console.log({isLogin:false, message:"Kullanıcı adı veya şifre hatalı"})
         res.status(500).json({status:false, message:"Kullanıcı adı veya şifre hatalı"})
     }
 
